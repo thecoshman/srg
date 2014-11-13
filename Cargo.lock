@@ -1,0 +1,60 @@
+[root]
+name = "srg"
+version = "0.0.1"
+dependencies = [
+ "glx 0.0.1 (git+https://github.com/rpjohnst/rust-glx.git)",
+ "xlib 0.1.0 (git+http://github.com/servo/rust-xlib.git)",
+]
+
+[[package]]
+name = "gl_common"
+version = "0.0.3"
+source = "git+https://github.com/bjz/gl-rs.git#230e6c9ed611cddfcb6682dee9686471d54863d0"
+
+[[package]]
+name = "gl_generator"
+version = "0.0.12"
+source = "git+https://github.com/bjz/gl-rs.git#230e6c9ed611cddfcb6682dee9686471d54863d0"
+dependencies = [
+ "gl_common 0.0.3 (git+https://github.com/bjz/gl-rs.git)",
+ "khronos_api 0.0.5 (git+https://github.com/bjz/gl-rs.git)",
+ "log 0.1.9 (registry+https://github.com/rust-lang/crates.io-index)",
+ "xml-rs 0.1.12 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "glx"
+version = "0.0.1"
+source = "git+https://github.com/rpjohnst/rust-glx.git#364fa6f97d95d4e80c3c267d2816a29eed274035"
+dependencies = [
+ "gl_generator 0.0.12 (git+https://github.com/bjz/gl-rs.git)",
+]
+
+[[package]]
+name = "khronos_api"
+version = "0.0.5"
+source = "git+https://github.com/bjz/gl-rs.git#230e6c9ed611cddfcb6682dee9686471d54863d0"
+
+[[package]]
+name = "log"
+version = "0.1.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "regex 0.1.10 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "regex"
+version = "0.1.10"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "xlib"
+version = "0.1.0"
+source = "git+http://github.com/servo/rust-xlib.git#e81fd3f7c903cf3b2245a9aff659603700312208"
+
+[[package]]
+name = "xml-rs"
+version = "0.1.12"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
