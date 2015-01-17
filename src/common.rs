@@ -2,9 +2,6 @@
 #![allow(dead_code)]
 #![feature(globs)]
 
-// pub use x11::window;
-
-
 pub enum WindowSize{
     Maximised,
     Resolution(i32, i32),

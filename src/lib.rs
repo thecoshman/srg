@@ -1,5 +1,3 @@
-//extern crate xlib;
-//extern crate libc;
-
 pub mod common;
+pub mod x11;
 

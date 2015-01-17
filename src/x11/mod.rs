@@ -1,5 +1,5 @@
 extern crate xlib;
 extern crate libc;
 
-pub use window;
+pub mod window;
 mod display;

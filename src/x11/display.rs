@@ -1,3 +1,4 @@
+#![allow(dead_code)]
 extern crate xlib;
 extern crate libc;
 
@@ -22,7 +23,7 @@ impl Display{
         }
     }
 
-    pub fn map_window(&self, window:window::X11Window){
+    pub fn map_window(&self, window:&window::X11Window){
         unsafe { xlib::XMapWindow(self.x_display, window.get_internal()) };
     }
 
