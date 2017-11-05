@@ -21,9 +21,9 @@ pub enum WindowBorders{
 impl Copy for WindowBorders{}
 
 pub struct WindowedMode{
-    window_size: WindowSize,
-    window_position: WindowPosition,
-    border: WindowBorders,
+    pub window_size: WindowSize,
+    pub window_position: WindowPosition,
+    pub border: WindowBorders,
 }
 impl Copy for WindowedMode{}
 
@@ -34,20 +34,20 @@ pub enum WindowMode{
 impl Copy for WindowMode{}
 
 pub struct OpenGLVersion{
-    majour: i32,
-    minor: i32,
+    pub majour: i32,
+    pub minor: i32,
 }
 impl Copy for OpenGLVersion{}
 
-pub struct WindowOptions{
-    title: String,
-    mode: WindowMode,
-    gl_version: OpenGLVersion,
-    red_bits: u8,
-    green_bits: u8,
-    blue_bits: u8,
-    alpha_bits: u8,
-    depth_bits: u8,
-    stencil_bits: u8,
+pub struct WindowOptions<'t>{
+    pub title: &'t str,
+    pub mode: WindowMode,
+    pub gl_version: OpenGLVersion,
+    pub red_bits: u8,
+    pub green_bits: u8,
+    pub blue_bits: u8,
+    pub alpha_bits: u8,
+    pub depth_bits: u8,
+    pub stencil_bits: u8,
 }
 
